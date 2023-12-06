@@ -1,0 +1,400 @@
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker version
+Client:
+ Cloud integration: v1.0.35+desktop.5
+ Version:           24.0.6
+ API version:       1.43
+ Go version:        go1.20.7
+ Git commit:        ed223bc
+ Built:             Mon Sep  4 12:32:48 2023
+ OS/Arch:           windows/amd64
+ Context:           default
+
+Server: Docker Desktop 4.25.2 (129061)
+ Engine:
+  Version:          24.0.6
+  API version:      1.43 (minimum version 1.12)
+  Go version:       go1.20.7
+  Git commit:       1a79695
+  Built:            Mon Sep  4 12:32:16 2023
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.6.22
+  GitCommit:        8165feabfdfe38c65b599c4993d227328c231fca
+ runc:
+  Version:          1.1.8
+  GitCommit:        v1.1.8-0-g82f18fe
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        de40ad0
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker>
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker>
+                                                                                      > docker pull busybox
+Using default tag: latest
+latest: Pulling from library/busybox
+3f4d90098f5b: Pull complete
+Digest: sha256:3fbc632167424a6d997e74f52b878d7cc478225cffac6bc977eedfe51c7f4e79
+Status: Downloaded newer image for busybox:latest
+docker.io/library/busybox:latest
+
+What's Next?
+  View a summary of image vulnerabilities and recommendations → docker scout quickview busybox
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+busybox      latest    a416a98b71e2   4 months ago   4.26MB
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker run busybox
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+busybox      latest    a416a98b71e2   4 months ago   4.26MB
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker run -it --name pinger busybox
+/ # ls
+bin    dev    etc    home   lib    lib64  proc   root   sys    tmp    usr    var
+/ # ls -la
+total 48
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 .
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 ..
+-rwxr-xr-x    1 root     root             0 Dec  3 16:43 .dockerenv
+drwxr-xr-x    2 root     root         12288 Jul 17 18:30 bin
+drwxr-xr-x    5 root     root           360 Dec  3 16:43 dev
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 etc
+drwxr-xr-x    2 nobody   nobody        4096 Jul 17 18:30 home
+drwxr-xr-x    2 root     root          4096 Jul 17 18:30 lib
+lrwxrwxrwx    1 root     root             3 Jul 17 18:30 lib64 -> lib
+dr-xr-xr-x  240 root     root             0 Dec  3 16:43 proc
+drwx------    1 root     root          4096 Dec  3 16:44 root
+dr-xr-xr-x   11 root     root             0 Dec  3 16:43 sys
+drwxrwxrwt    2 root     root          4096 Jul 17 18:30 tmp
+drwxr-xr-x    4 root     root          4096 Jul 17 18:30 usr
+drwxr-xr-x    4 root     root          4096 Jul 17 18:30 var
+/ #
+/ #
+/ #
+/ #
+/ # hostname -i
+172.17.0.2
+/ #
+/ #
+/ #
+/ #
+/ # ping -c 7 netology.ru
+PING netology.ru (188.114.99.224): 56 data bytes
+64 bytes from 188.114.99.224: seq=0 ttl=63 time=16.390 ms
+64 bytes from 188.114.99.224: seq=1 ttl=63 time=7.254 ms
+64 bytes from 188.114.99.224: seq=2 ttl=63 time=5.844 ms
+64 bytes from 188.114.99.224: seq=3 ttl=63 time=8.489 ms
+64 bytes from 188.114.99.224: seq=4 ttl=63 time=6.918 ms
+64 bytes from 188.114.99.224: seq=5 ttl=63 time=6.235 ms
+64 bytes from 188.114.99.224: seq=6 ttl=63 time=6.100 ms
+
+--- netology.ru ping statistics ---
+7 packets transmitted, 7 packets received, 0% packet loss
+round-trip min/avg/max = 5.844/8.175/16.390 ms
+/ #
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                       PORTS     NAMES
+6028333919c1   busybox   "sh"      28 minutes ago   Exited (137) 5 minutes ago             pinger
+5a8c45b8bd30   busybox   "sh"      40 minutes ago   Exited (0) 40 minutes ago              sleepy_perlman
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+busybox      latest    a416a98b71e2   4 months ago   4.26MB
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker>
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker logs pinger
+/ # ls
+bin    dev    etc    home   lib    lib64  proc   root   sys    tmp    usr    var
+/ # ls -la
+total 48
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 .
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 ..
+-rwxr-xr-x    1 root     root             0 Dec  3 16:43 .dockerenv
+drwxr-xr-x    2 root     root         12288 Jul 17 18:30 bin
+drwxr-xr-x    5 root     root           360 Dec  3 16:43 dev
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 etc
+drwxr-xr-x    2 nobody   nobody        4096 Jul 17 18:30 home
+drwxr-xr-x    2 root     root          4096 Jul 17 18:30 lib
+lrwxrwxrwx    1 root     root             3 Jul 17 18:30 lib64 -> lib
+dr-xr-xr-x  240 root     root             0 Dec  3 16:43 proc
+drwx------    1 root     root          4096 Dec  3 16:44 root
+dr-xr-xr-x   11 root     root             0 Dec  3 16:43 sys
+drwxrwxrwt    2 root     root          4096 Jul 17 18:30 tmp
+drwxr-xr-x    4 root     root          4096 Jul 17 18:30 usr
+drwxr-xr-x    4 root     root          4096 Jul 17 18:30 var
+/ #
+/ #
+/ #
+/ #
+/ # hostname -i
+172.17.0.2
+/ #
+/ #
+/ #
+/ #
+/ # ping -c 7 netology.ru
+PING netology.ru (188.114.99.224): 56 data bytes
+64 bytes from 188.114.99.224: seq=0 ttl=63 time=16.390 ms
+64 bytes from 188.114.99.224: seq=1 ttl=63 time=7.254 ms
+64 bytes from 188.114.99.224: seq=2 ttl=63 time=5.844 ms
+64 bytes from 188.114.99.224: seq=3 ttl=63 time=8.489 ms
+64 bytes from 188.114.99.224: seq=4 ttl=63 time=6.918 ms
+64 bytes from 188.114.99.224: seq=5 ttl=63 time=6.235 ms
+64 bytes from 188.114.99.224: seq=6 ttl=63 time=6.100 ms
+
+--- netology.ru ping statistics ---
+7 packets transmitted, 7 packets received, 0% packet loss
+round-trip min/avg/max = 5.844/8.175/16.390 ms
+/ #
+/ #
+/ # docker start pinger
+sh: docker: not found
+/ # docker ps -a
+sh: docker: not found
+/ # docker ps
+sh: docker: not found
+/ # docker stop pinger
+sh: docker: not found
+/ # ^C
+
+/ # docker stop pinger busybox
+sh: docker: not found
+/ #
+/ #
+/ # ping -c 7 netology.ru
+PING netology.ru (188.114.98.224): 56 data bytes
+64 bytes from 188.114.98.224: seq=0 ttl=63 time=7.395 ms
+64 bytes from 188.114.98.224: seq=1 ttl=63 time=29.285 ms
+64 bytes from 188.114.98.224: seq=2 ttl=63 time=10.197 ms
+64 bytes from 188.114.98.224: seq=3 ttl=63 time=8.144 ms
+64 bytes from 188.114.98.224: seq=4 ttl=63 time=8.146 ms
+64 bytes from 188.114.98.224: seq=5 ttl=63 time=7.503 ms
+64 bytes from 188.114.98.224: seq=6 ttl=63 time=7.876 ms
+
+--- netology.ru ping statistics ---
+7 packets transmitted, 7 packets received, 0% packet loss
+round-trip min/avg/max = 7.395/11.220/29.285 ms
+/ # docker stop pinger
+sh: docker: not found
+/ # ps
+PID   USER     TIME  COMMAND
+    1 root      0:00 sh
+   13 root      0:00 ps
+/ #
+/ #
+/ #
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker>
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker logs 6028333919c1
+/ # ls
+bin    dev    etc    home   lib    lib64  proc   root   sys    tmp    usr    var
+/ # ls -la
+total 48
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 .
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 ..
+-rwxr-xr-x    1 root     root             0 Dec  3 16:43 .dockerenv
+drwxr-xr-x    2 root     root         12288 Jul 17 18:30 bin
+drwxr-xr-x    5 root     root           360 Dec  3 16:43 dev
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 etc
+drwxr-xr-x    2 nobody   nobody        4096 Jul 17 18:30 home
+drwxr-xr-x    2 root     root          4096 Jul 17 18:30 lib
+lrwxrwxrwx    1 root     root             3 Jul 17 18:30 lib64 -> lib
+dr-xr-xr-x  240 root     root             0 Dec  3 16:43 proc
+drwx------    1 root     root          4096 Dec  3 16:44 root
+dr-xr-xr-x   11 root     root             0 Dec  3 16:43 sys
+drwxrwxrwt    2 root     root          4096 Jul 17 18:30 tmp
+drwxr-xr-x    4 root     root          4096 Jul 17 18:30 usr
+drwxr-xr-x    4 root     root          4096 Jul 17 18:30 var
+/ #
+/ #
+/ #
+/ #
+/ # hostname -i
+172.17.0.2
+/ #
+/ #
+/ #
+/ #
+/ # ping -c 7 netology.ru
+PING netology.ru (188.114.99.224): 56 data bytes
+64 bytes from 188.114.99.224: seq=0 ttl=63 time=16.390 ms
+64 bytes from 188.114.99.224: seq=1 ttl=63 time=7.254 ms
+64 bytes from 188.114.99.224: seq=2 ttl=63 time=5.844 ms
+64 bytes from 188.114.99.224: seq=3 ttl=63 time=8.489 ms
+64 bytes from 188.114.99.224: seq=4 ttl=63 time=6.918 ms
+64 bytes from 188.114.99.224: seq=5 ttl=63 time=6.235 ms
+64 bytes from 188.114.99.224: seq=6 ttl=63 time=6.100 ms
+
+--- netology.ru ping statistics ---
+7 packets transmitted, 7 packets received, 0% packet loss
+round-trip min/avg/max = 5.844/8.175/16.390 ms
+/ #
+/ #
+/ # docker start pinger
+sh: docker: not found
+/ # docker ps -a
+sh: docker: not found
+/ # docker ps
+sh: docker: not found
+/ # docker stop pinger
+sh: docker: not found
+/ # ^C
+
+/ # docker stop pinger busybox
+sh: docker: not found
+/ #
+/ #
+/ # ping -c 7 netology.ru
+PING netology.ru (188.114.98.224): 56 data bytes
+64 bytes from 188.114.98.224: seq=0 ttl=63 time=7.395 ms
+64 bytes from 188.114.98.224: seq=1 ttl=63 time=29.285 ms
+64 bytes from 188.114.98.224: seq=2 ttl=63 time=10.197 ms
+64 bytes from 188.114.98.224: seq=3 ttl=63 time=8.144 ms
+64 bytes from 188.114.98.224: seq=4 ttl=63 time=8.146 ms
+64 bytes from 188.114.98.224: seq=5 ttl=63 time=7.503 ms
+64 bytes from 188.114.98.224: seq=6 ttl=63 time=7.876 ms
+
+--- netology.ru ping statistics ---
+7 packets transmitted, 7 packets received, 0% packet loss
+round-trip min/avg/max = 7.395/11.220/29.285 ms
+/ # docker stop pinger
+sh: docker: not found
+/ # ps
+PID   USER     TIME  COMMAND
+    1 root      0:00 sh
+   13 root      0:00 ps
+/ #
+/ #
+/ #
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> 
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker stop 6028333919c1
+6028333919c1
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+busybox      latest    a416a98b71e2   4 months ago   4.26MB
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED             STATUS                         PORTS     NAMES
+6028333919c1   busybox   "sh"      About an hour ago   Exited (137) 37 minutes ago              pinger
+5a8c45b8bd30   busybox   "sh"      About an hour ago   Exited (0) About an hour ago             sleepy_perlman
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker start 6028333919c1
+6028333919c1
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED             STATUS          PORTS     NAMES
+6028333919c1   busybox   "sh"      About an hour ago   Up 14 seconds             pinger
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED             STATUS                         PORTS     NAMES
+6028333919c1   busybox   "sh"      About an hour ago   Up 52 seconds                            pinger
+5a8c45b8bd30   busybox   "sh"      About an hour ago   Exited (0) About an hour ago             sleepy_perlman
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker>
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker logs pinger
+/ # ls
+bin    dev    etc    home   lib    lib64  proc   root   sys    tmp    usr    var
+/ # ls -la
+total 48
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 .
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 ..
+-rwxr-xr-x    1 root     root             0 Dec  3 16:43 .dockerenv
+drwxr-xr-x    2 root     root         12288 Jul 17 18:30 bin
+drwxr-xr-x    5 root     root           360 Dec  3 16:43 dev
+drwxr-xr-x    1 root     root          4096 Dec  3 16:43 etc
+drwxr-xr-x    2 nobody   nobody        4096 Jul 17 18:30 home
+drwxr-xr-x    2 root     root          4096 Jul 17 18:30 lib
+lrwxrwxrwx    1 root     root             3 Jul 17 18:30 lib64 -> lib
+dr-xr-xr-x  240 root     root             0 Dec  3 16:43 proc
+drwx------    1 root     root          4096 Dec  3 16:44 root
+dr-xr-xr-x   11 root     root             0 Dec  3 16:43 sys
+drwxrwxrwt    2 root     root          4096 Jul 17 18:30 tmp
+drwxr-xr-x    4 root     root          4096 Jul 17 18:30 usr
+drwxr-xr-x    4 root     root          4096 Jul 17 18:30 var
+/ #
+/ #
+/ #
+/ #
+/ # hostname -i
+172.17.0.2
+/ #
+/ #
+/ #
+/ #
+/ # ping -c 7 netology.ru
+PING netology.ru (188.114.99.224): 56 data bytes
+64 bytes from 188.114.99.224: seq=0 ttl=63 time=16.390 ms
+64 bytes from 188.114.99.224: seq=1 ttl=63 time=7.254 ms
+64 bytes from 188.114.99.224: seq=2 ttl=63 time=5.844 ms
+64 bytes from 188.114.99.224: seq=3 ttl=63 time=8.489 ms
+64 bytes from 188.114.99.224: seq=4 ttl=63 time=6.918 ms
+64 bytes from 188.114.99.224: seq=5 ttl=63 time=6.235 ms
+64 bytes from 188.114.99.224: seq=6 ttl=63 time=6.100 ms
+
+--- netology.ru ping statistics ---
+7 packets transmitted, 7 packets received, 0% packet loss
+round-trip min/avg/max = 5.844/8.175/16.390 ms
+/ #
+/ #
+/ # docker start pinger
+sh: docker: not found
+/ # docker ps -a
+sh: docker: not found
+/ # docker ps
+sh: docker: not found
+/ # docker stop pinger
+sh: docker: not found
+/ # ^C
+
+/ # docker stop pinger busybox
+sh: docker: not found
+/ #
+/ #
+/ # ping -c 7 netology.ru
+PING netology.ru (188.114.98.224): 56 data bytes
+64 bytes from 188.114.98.224: seq=0 ttl=63 time=7.395 ms
+64 bytes from 188.114.98.224: seq=1 ttl=63 time=29.285 ms
+64 bytes from 188.114.98.224: seq=2 ttl=63 time=10.197 ms
+64 bytes from 188.114.98.224: seq=3 ttl=63 time=8.144 ms
+64 bytes from 188.114.98.224: seq=4 ttl=63 time=8.146 ms
+64 bytes from 188.114.98.224: seq=5 ttl=63 time=7.503 ms
+64 bytes from 188.114.98.224: seq=6 ttl=63 time=7.876 ms
+
+--- netology.ru ping statistics ---
+7 packets transmitted, 7 packets received, 0% packet loss
+round-trip min/avg/max = 7.395/11.220/29.285 ms
+/ # docker stop pinger
+sh: docker: not found
+/ # ps
+PID   USER     TIME  COMMAND
+    1 root      0:00 sh
+   13 root      0:00 ps
+/ #
+/ #
+/ #
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker>
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker stop 6028333919c1
+6028333919c1
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker rm pinger
+pinger
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED             STATUS                         PORTS     NAMES
+5a8c45b8bd30   busybox   "sh"      About an hour ago   Exited (0) About an hour ago             sleepy_perlman
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker images
+REPOSITORY   TAG       IMAGE ID       CREATED        SIZE
+busybox      latest    a416a98b71e2   4 months ago   4.26MB
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker>
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker rmi busybox
+Error response from daemon: conflict: unable to remove repository reference "busybox" (must force) - container 5a8c45b8bd30 is using its referenced image a416a98b71e2
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker rmi -f $(docker images -qa)
+Untagged: busybox:latest
+Untagged: busybox@sha256:3fbc632167424a6d997e74f52b878d7cc478225cffac6bc977eedfe51c7f4e79
+Deleted: sha256:a416a98b71e224a31ee99cff8e16063554498227d2b696152a9c3e0aa65e5824
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker> docker images
+REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+PS C:\D\Netologiya\9.Node.JS-libraryExpress.js\ndse-homeworks-master\009-docker\docker>
+
